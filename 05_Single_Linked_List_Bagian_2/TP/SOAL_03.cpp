@@ -6,7 +6,7 @@ struct Node {
     Node* next;
 };
 
-void insertSorted(Node*& head, Node* node) {
+void insertSorted_2311104013(Node*& head, Node* node) {
     Node* Q = head;
     Node* prev = NULL;
     bool found = false;
@@ -32,7 +32,7 @@ void insertSorted(Node*& head, Node* node) {
     }
 }
 
-void displayList(Node* head) {
+void displayList_2311104013(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
         cout << temp->data << " ";
@@ -54,11 +54,11 @@ int main() {
         node->next = NULL;
 
 
-        insertSorted(head, node);
+        insertSorted_2311104013(head, node);
     }
 
     cout << "List setelah diurutkan: ";
-    displayList(head);
+    displayList_2311104013(head);
 
     return 0;
 }

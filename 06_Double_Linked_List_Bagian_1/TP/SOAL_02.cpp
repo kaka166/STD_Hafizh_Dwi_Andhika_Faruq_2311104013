@@ -7,7 +7,7 @@ struct Node {
     Node* prev;
 };
 
-void insertLast(Node*& head, int value) {
+void insertLast_2311104013(Node*& head, int value) {
     Node* node = new Node();
     node->data = value;
     node->next = NULL;
@@ -27,7 +27,7 @@ void insertLast(Node*& head, int value) {
     node->prev = temp;
 }
 
-void deleteFirst(Node*& head) {
+void deleteFirst_2311104013(Node*& head) {
     Node* temp = head;
     head = head->next;
 
@@ -38,7 +38,7 @@ void deleteFirst(Node*& head) {
     delete temp;
 }
 
-void deleteLast(Node*& head) {
+void deleteLast_2311104013(Node*& head) {
     Node* temp = head;
     if (temp->next == NULL) {
         delete temp;
@@ -54,7 +54,7 @@ void deleteLast(Node*& head) {
     delete temp;
 }
 
-void displayList(Node* head) {
+void displayList_2311104013(Node* head) {
     Node* temp = head;
     cout << "Daftar Anggota List setelah dihapus: ";
     while (temp != NULL) {
@@ -73,21 +73,21 @@ int main() {
 
     cout << "Masukan elemen pertama: ";
     cin >> value;
-    insertLast(head, value);
+    insertLast_2311104013(head, value);
     
     cout << "Masukan elemen kedua di akhir: ";
     cin >> value;
-    insertLast(head, value);
+    insertLast_2311104013(head, value);
 
     cout << "Masukan elemen ketiga di akhir: ";
     cin >> value;
-    insertLast(head, value);
+    insertLast_2311104013(head, value);
 
 
-    deleteFirst(head);
-    deleteLast(head);
+    deleteFirst_2311104013(head);
+    deleteLast_2311104013(head);
 
-    displayList(head); 
+    displayList_2311104013(head); 
 
     return 0;
 }

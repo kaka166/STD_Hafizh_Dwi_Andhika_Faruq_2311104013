@@ -6,7 +6,7 @@ struct Node {
     Node* next;        
 };
 
-void insert(Node*& head, int value) {
+void insert_2311104013(Node*& head, int value) {
     Node* node = new Node();
     node->data = value;
     node->next = NULL;
@@ -22,7 +22,7 @@ void insert(Node*& head, int value) {
     }
 }
 
-void bubbleSortList(Node* head) {
+void bubbleSortList_2311104013(Node* head) {
     bool swapped;
     Node* current;
     Node* lastSorted = NULL;
@@ -48,7 +48,7 @@ void bubbleSortList(Node* head) {
     } while (swapped);
 }
 
-void displayList(Node* head) {
+void displayList_2311104013(Node* head) {
     Node* temp = head;
     while (temp != NULL) {
         cout << temp->data << " ";
@@ -64,16 +64,16 @@ int main() {
     for (int i = 0; i < 5; i++) {
         cout << "Elemen ke-" << i+1 << ": ";
         cin >> value;
-        insert(head, value);
+        insert_2311104013(head, value);
     }
     
     cout << "List sebelum diurutkan: ";
-    displayList(head);
+    displayList_2311104013(head);
 
-    bubbleSortList(head);
+    bubbleSortList_2311104013(head);
 
     cout << "List setelah diurutkan: ";
-    displayList(head);
+    displayList_2311104013(head);
     
     return 0;
 }
